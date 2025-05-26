@@ -1,0 +1,63 @@
+{
+	margin:0px;
+	padding:0px;
+	font-family: verdana; 
+
+}
+header{
+	margin:100px auto;
+	width:1000px;
+	height:230px;  
+	position: relative;
+	left: 3%;
+}
+div.contenedor{
+	width: 300px;
+	height: 230px;
+	float:left;
+
+}
+div.salir{
+	position: absolute;
+	top: 560px;
+	left: 650px;
+}
+div#uno{
+	background-color: rgb(0, 0, 0,0.3); 
+
+}
+div#dos{
+	background-color: rgb(252, 112, 138, 0.3);
+}
+div#tres{
+	background-color: rgb(241, 252, 112,0.3);
+}
+div#cuatro{
+	background-color: rgb(22,107,162,0.3);
+}
+div#cinco{
+	background-color: rgb(221, 48, 72,0.3);
+}
+div#seis{
+	background-color: rgb(48, 221, 61,0.3);
+}
+
+img.icon{
+	display: block;
+	margin:50px auto;
+	background-color: rgba(255,255,255,.15);
+	width:80px;
+	padding:20px;
+}
+
+p.texto{
+	font-size: 1.2em;
+	color: rbga(170, 183, 184);
+	text-align: center;
+	padding-top:60px;
+	opacity: .17;
+}
+
+
+
+
