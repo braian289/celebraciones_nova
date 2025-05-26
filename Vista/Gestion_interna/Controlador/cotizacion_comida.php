@@ -1,88 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximu-scale=1.0, minimun-scale=1.0">
-<title>Calculadora</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet"  href="../Css/resultado.css">  
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Calculadora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Css/resultado.css">
+</head>
 <body>
 
+  <div class="input-contenedor">
+    <center>
+      <h1 style="font-family: Arial; color: #EAECEE;">El costo total es de:</h1>
 
-			<div class="input-contenedor">
-         <i class="fas fa-envelope icon"></i>
+      <form id="calculatorForm">
+        <!-- Entradas numéricas para cada protocolo -->
+        <div class="contenedor">
+          <!-- Puedes agregar input dinámicos o con nombres fijos -->
+          <input type="number" name="num1" placeholder="Cantidad del producto 1" required><br>
+          <input type="number" name="num2" placeholder="Cantidad del producto 2" required><br>
+          <input type="number" name="num3" placeholder="Cantidad del producto 3" required><br>
+          <!-- Agrega los 13 inputs como en el PHP -->
+          <input type="number" name="num4" placeholder="Cantidad del producto 4" required><br>
+          <input type="number" name="num5" placeholder="Cantidad del producto 5" required><br>
+          <input type="number" name="num6" placeholder="Cantidad del producto 6" required><br>
+          <input type="number" name="num7" placeholder="Cantidad del producto 7" required><br>
+          <input type="number" name="num8" placeholder="Cantidad del producto 8" required><br>
+          <input type="number" name="num9" placeholder="Cantidad del producto 9" required><br>
+          <input type="number" name="num10" placeholder="Cantidad del producto 10" required><br>
+          <input type="number" name="num11" placeholder="Cantidad del producto 11" required><br>
+          <input type="number" name="num12" placeholder="Cantidad del producto 12" required><br>
+          <input type="number" name="num13" placeholder="Cantidad del producto 13" required><br>
+        </div>
 
-     
-<center>
+        <button type="submit">Calcular Total</button>
+      </form>
 
+      <h3 id="resultado" style="font-size: 2em; color: #000;"></h3>
 
-<center>
-<br>
-<h1 class="animate__animated animate__bounce animate__repeat-3"><p style = "font-family:arial;"><p style="color:#EAECEE"> </h1>
+      <br><br><br>
+      <span class="clientes">
+        <a href="../Modelo/Calculadora cientifica.html">
+          <font size="6" color="#EEF0F0">Volver</font>
+        </a>
+      </span>
+    </center>
+  </div>
 
-		<div class="contenedor_tarjeta">
+  <script>
+    const precios = [
+      46800, 39000, 31200, 35100, 97500, 85800, 70200,
+      66300, 27300, 23400, 19500, 23400, 46800
+    ];
 
-			
-		 <figure>
-		 	<h1>El costo total es de:</h1> 
-		 		<div class="contenedor">
- <?php
+    document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+      e.preventDefault();
 
-	$precio1=46.800;
-	$precio2=39.000;
-	$precio3=31.200;
-	$precio4=35.100;
-	$precio5=97.500 ;
-	$precio6=85.800;
-	$precio7=70.200;
-	$precio8=66.300;
-	$precio9=27.300;
-	$precio10=23.400;
-	$precio11=19.500;
-	$precio12=23.400;
-	$precio13=46.800;
+      let total = 0;
+      for (let i = 0; i < precios.length; i++) {
+        const cantidad = parseFloat(this[`num${i + 1}`].value) || 0;
+        total += cantidad * precios[i];
+      }
 
-
-	$Protocolo1= $_POST['num1']* $precio1;
-	$Protocolo2= $_POST['num2']* $precio2;
-	$Protocolo3= $_POST['num3']* $precio3;
-	$Protocolo4= $_POST['num4']* $precio4;
-	$Protocolo5= $_POST['num5']* $precio5;
-	$Protocolo6= $_POST['num6']* $precio6;
-	$Protocolo7= $_POST['num7']* $precio7;
-	$Protocolo8= $_POST['num8']* $precio8;
-	$Protocolo9= $_POST['num9']* $precio9;
-	$Protocolo10= $_POST['num10']* $precio10;
-	$Protocolo11= $_POST['num11']* $precio11;
-	$Protocolo12= $_POST['num12']* $precio12;
-	$Protocolo13= $_POST['num13']* $precio13;
-
-
-	$Totalprotocolos= $Protocolo1 + $Protocolo2 + $Protocolo3 + $Protocolo4 + $Protocolo5 +$Protocolo6 + $Protocolo7 + $Protocolo8 + $Protocolo9 + $Protocolo10 + $Protocolo11 + $Protocolo12 + $Protocolo13;
-	echo "<font size='8'><h3>$".$Totalprotocolos."</h3></font>";
-
-
-?>
-</div>
- <br>
-
-
-	</font>
-</center></p>
-<center>
-
-	<br><br><br>
-	<span class="clientes"><a href="../Modelo/Calculadora cientifica.html"><font size="6"color="#EEF0F0">Volver</span>
-	</font>
-</a>
-</span>
-</center>
-</figure>
-</p>
+      document.getElementById('resultado').textContent = "$" + total.toLocaleString('es-CO', { minimumFractionDigits: 2 });
+    });
+  </script>
+</body>
 </html>
-
-
-
-
-
-
