@@ -1,0 +1,90 @@
+{
+	margin:0px;
+	padding:0px;
+	font-family: verdana; 
+
+}
+header{
+	margin:100px auto;
+	width:1000px;
+	height:230px;  
+	position: relative;
+	left: 3%;
+	top: -60px;
+}
+div.contenedor{
+	width: 300px;
+	height: 230px;
+	float:left;
+
+}
+div.salir{
+	position: absolute;
+	top: 1300px;
+	left: 650px;
+}
+div#uno{
+	background-color: rgb(48, 221, 69,0.80); 
+
+}
+div#dos{
+	background-color: rgb(255, 107, 34 ,0.80);
+}
+div#tres{
+	background-color: rgb(241, 252, 112,0.80);
+}
+div#cuatro{
+	background-color: rgb(22,107,162,0.3);
+}
+div#cinco{
+	background-color: rgb(221, 48, 72,0.3);
+
+}
+div#seis{
+	background-color: rgb(48, 221, 61,0.3);
+}
+div#siete{
+	background-color: rgb(48, 221, 61,0.3);
+}
+div#ocho{
+	background-color: rgb(255, 34, 34,0.3);
+}
+div#nueve{
+	background-color: rgb(34, 232, 255,0.3);
+}
+div#diez{
+	background-color: rgb(48, 221, 69,0.80);
+}
+div#once{
+	background-color: rgb(255, 107, 34 ,0.80);
+}
+div#doce{
+	background-color: rgb(241, 252, 112,0.80);
+}
+div#trece{
+	background-color: rgb(22,107,162,0.3);
+}
+div#catorce{
+	background-color: rgb(34, 232, 255,0.3);
+}
+div#quince{
+	background-color: rgb(221, 48, 72,0.3);
+}
+
+img.icon{
+	display: block;
+	margin:20px auto;
+	background-color: rgba(255,255,255,.15);
+	width:60px;
+	height: 130px;
+	padding:20px;
+}
+p.texto{
+	font-size: 0.9em;
+	color: rbga(170, 183, 184);
+	text-align: center;
+}
+
+
+
+

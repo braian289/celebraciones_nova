@@ -1,0 +1,51 @@
+{
+	margin:0px;
+	padding:0px;
+	font-family: verdana; 
+
+}
+header{
+	margin:100px auto;
+	width:1000px;
+	height:230px;  
+	position: relative;
+	left: 3%;
+	top: 30px;
+}
+div.contenedor{
+	width: 300px;
+	height: 230px;
+
+
+}
+div.salir{
+	position: absolute;
+	top: 560px;
+	left: 650px;
+}
+div#uno{
+	position: absolute;
+	left: 320px;
+	background-color: rgb(48, 221, 69,0.80); 
+
+}
+
+img.icon{
+	display: block;
+	margin:50px auto;
+	background-color: rgba(255,255,255,.15);
+	width:80px;
+	padding:20px;
+}
+
+p.texto{
+	font-size: 1.2em;
+	color: rbga(170, 183, 184);
+	text-align: center;
+	padding-top:60px;
+	opacity: .17;
+}
+
+
+
+
